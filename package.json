@@ -1,7 +1,7 @@
 {
   "name": "courier-hub",
   "version": "0.1.0",
-  "description": "",
+  "description": "One API for every courier in Bangladesh. A type-safe, tree-shakeable SDK for Steadfast, Pathao, RedX — create orders, track parcels, cancel shipments.",
   "homepage": "https://github.com/rafidahmed870/courier-hub#readme",
   "bugs": {
     "url": "https://github.com/rafidahmed870/courier-hub/issues"
