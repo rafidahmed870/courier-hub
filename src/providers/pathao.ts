@@ -109,21 +109,30 @@ class Pathao {
 
   public async getCities(): Promise<PathaoLocationResponse<PathaoCity>> {
     const headers = await this.getAuthHeaders();
-    return this.request("/aladdin/api/v1/city-list", { headers });
+    return this.request("/aladdin/api/v1/city-list", {
+      method: "GET",
+      headers,
+    });
   }
 
   public async getZones(
     cityId: number,
   ): Promise<PathaoLocationResponse<PathaoZone>> {
     const headers = await this.getAuthHeaders();
-    return this.request(`/aladdin/api/v1/zones?city_id=${cityId}`, { headers });
+    return this.request(`/aladdin/api/v1/zones?city_id=${cityId}`, {
+      method: "GET",
+      headers,
+    });
   }
 
   public async getAreas(
     zoneId: number,
   ): Promise<PathaoLocationResponse<PathaoArea>> {
     const headers = await this.getAuthHeaders();
-    return this.request(`/aladdin/api/v1/areas?zone_id=${zoneId}`, { headers });
+    return this.request(`/aladdin/api/v1/areas?zone_id=${zoneId}`, {
+      method: "GET",
+      headers,
+    });
   }
 
   public async calculatePrice(
@@ -214,6 +223,7 @@ class Pathao {
   ): Promise<PathaoOrderInfoResponse> {
     const headers = await this.getAuthHeaders();
     return this.request(`/aladdin/api/v1/orders/${consignmentId}/info`, {
+      method: "GET",
       headers,
     });
   }

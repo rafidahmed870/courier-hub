@@ -199,36 +199,31 @@ describe("Pathao", () => {
   });
 
   describe("endpoints", () => {
-    type Case = [
-      string,
-      (client: Pathao) => Promise<unknown>,
-      string | undefined,
-      string,
-    ];
+    type Case = [string, (client: Pathao) => Promise<unknown>, string, string];
 
     const cases: Case[] = [
       [
         "getCities",
         (client) => client.getCities(),
-        undefined,
+        "GET",
         "/aladdin/api/v1/city-list",
       ],
       [
         "getZones",
         (client) => client.getZones(3),
-        undefined,
+        "GET",
         "/aladdin/api/v1/zones?city_id=3",
       ],
       [
         "getAreas",
         (client) => client.getAreas(5),
-        undefined,
+        "GET",
         "/aladdin/api/v1/areas?zone_id=5",
       ],
       [
         "getOrderInfo",
         (client) => client.getOrderInfo("ord-1"),
-        undefined,
+        "GET",
         "/aladdin/api/v1/orders/ord-1/info",
       ],
       [
