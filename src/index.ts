@@ -1,2 +1,3 @@
 export { version } from "./version";
-export { Steadfast } from "./providers/index.js";
+export { default as CourierHub } from "./core/courier-hub.js";
+export type { CourierHubConfig } from "./types/courier-hub.types.js";
