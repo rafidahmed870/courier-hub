@@ -1,0 +1,45 @@
+name: Courier Integration Request
+description: Request support for a new courier/delivery service integration
+title: "[Courier Request]: "
+labels: ["courier-integration"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new courier integration! Please fill out the details below so we can evaluate and prioritize the request.
+
+  - type: input
+    id: courier_name
+    attributes:
+      label: Courier / Delivery Service Name
+      description: What is the name of the courier or delivery service you want integrated?
+      placeholder: e.g., FedEx, DHL, Pathao, Steadfast
+    validations:
+      required: true
+
+  - type: input
+    id: courier_website
+    attributes:
+      label: Official Website URL
+      description: Link to the courier's official website.
+      placeholder: https://example.com
+    validations:
+      required: false
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use Case / Why This Integration?
+      description: Describe your use case and why this courier integration would be valuable for courier-hub users.
+      placeholder: Many e-commerce businesses in Bangladesh rely on this courier for last-mile delivery...
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other details, links, or references that might help us implement this integration.
+    validations:
+      required: false
+
