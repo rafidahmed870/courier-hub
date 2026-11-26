@@ -1,6 +1,6 @@
 {
   "name": "courier-hub",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "One API for every courier in Bangladesh. A type-safe, tree-shakeable SDK for Steadfast, Pathao, RedX — create orders, track parcels, cancel shipments.",
   "keywords": [
     "bangladesh",
