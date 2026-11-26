@@ -1,8 +1,9 @@
-import { Pathao, Steadfast } from "../providers/index.js";
+import { Pathao, Steadfast, Redx } from "../providers/index.js";
 import type { CourierHubConfig } from "../types/courier-hub.types.js";
 
 class CourierHub {
   private steadfast?: Steadfast;
+  private redx?: Redx;
   private pathao?: Pathao;
 
   constructor(config: CourierHubConfig = {}) {
@@ -12,6 +13,10 @@ class CourierHub {
 
     if (config.pathao) {
       this.pathao = new Pathao(config.pathao);
+    }
+
+    if (config.redx) {
+      this.redx = new Redx(config.redx);
     }
   }
 
@@ -33,6 +38,16 @@ class CourierHub {
     }
 
     return this.pathao;
+  }
+
+  get Redx(): Redx {
+    if (!this.redx) {
+      throw new Error(
+        "Redx provider is not configured. Pass `redx` in the CourierHub config.",
+      );
+    }
+
+    return this.redx;
   }
 }
 
